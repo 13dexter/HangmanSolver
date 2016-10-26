@@ -1,0 +1,26 @@
+Name : Rishubh Singh
+
+Hangman Solver Specifications:
+
+Program running specifications :
+	Number of words tested : 50000
+	Number of words correctly guessed : 48228
+	Accuracy in guessing : 96.456
+	Time taken : 33 secs
+
+RAM memory consumed during processing ~ the space all words take to get stores into a vector (for 500000 words ~ 5MB)
+
+Trade Offs : For the maximum possible accuracy (umber of words correctly guessed) had to leave out some other (inevitable by this 				 method).
+
+Assumptions : Duplicates if present (were present in 50000 words) will only occur continuously, i.e. dictionary will be sorted.
+
+To compile the program : (Ubuntu)
+g++ -o solver.out solver_hangman.cpp
+
+To run the program with a given dictionary input file (for eg. words_50000.txt) :
+./solver.out < words_50000.txt
+
+The spcification data is shown on the termainal (time is in seconds).
+The output data for each word guessed (the steps) are printed in a file generated "output.txt".
+Search any word in the text file, the steps it took to succeed or fail are shown.
+(If failed words are needed to be seen search "Failed");
